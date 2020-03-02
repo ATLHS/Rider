@@ -12,8 +12,13 @@ app.get("/signup", (req, res) => {
         {firstname: "your firstname"},
         {number: "your number"}
     ];
-
     res.json(signup);
 })
 
+if(process.env.NODE_ENV === "production"){
+    app.use(express.static(path.join(__dirname, "./client/build")));
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname + "../client/build/index.html"));
+        });
+}
 app.listen(PORT, () => console.log(`App running on port : ${PORT}`))
