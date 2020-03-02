@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
+.navbar
+{
+    z-index: 1;
+}
+#brand
+{
+    font-family: 'Fugaz One';
+    font-size: 30px;
+    color: white;
+}
+.link
+{
+    font-size: 1.3rem;
+}
+.mobile_link
+{
+    display: none;
+}
+
+@media screen and (max-width: 700px)
+{
+    .desktop_navlink
+    {
+        display: none !important;
+    }
+    .mobile_link
+    {
+        display: block;
+    }
+}
