@@ -14,11 +14,6 @@
     font-family: 'Open Sans' ;
     width: 75%;
 }
-.request_a_ride_cta
-{
-    background-color: black !important;
-    border: solid black !important;
-}
 .ride_headline2
 {
     font-family: 'Open Sans' ;
@@ -53,13 +48,7 @@
     .rider_form
     {
         width: 100%;
-    }
-    .request_a_ride_cta
-    {
-        padding: 2%;
-    }
-    
-    
+    }  
 }
 
 

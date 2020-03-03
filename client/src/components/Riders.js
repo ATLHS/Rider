@@ -24,7 +24,7 @@ const Riders = () => {
                             <Form.Control className="bg-transparent text-light" placeholder="Enter destination" />
                         </Col>
                         <Col className="pb-2" md={4}>
-                            <Button className="request_a_ride_cta" type="submit" block>Commandez une course</Button>
+                            <Button variant="light" type="submit" block>Commandez une course</Button>
                         </Col>
                     </Row>
                     
