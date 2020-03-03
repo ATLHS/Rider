@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import Burger from '@animated-burgers/burger-squeeze';
+import '@animated-burgers/burger-squeeze/dist/styles.css';
 import Row from 'react-bootstrap/Row';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import '../../css/navigation.css';
 
 const Navigation = () => {
+    const [isOpen, setisOpen] = useState(false)
     return (
     <Row className="position-absolute w-100 navbar"> 
         <Navbar className="w-100"  bg="transparent" variant="dark">
@@ -16,7 +19,7 @@ const Navigation = () => {
                 <Link to="/login" className="text-light ml-2 mr-2 link" href="#pricing">Connexion</Link>
             </Nav>
             <Nav className="ml-auto mobile_link">
-                <span><i className="fas fa-bars"></i></span>
+                <Burger onClick={() => setisOpen(!isOpen)} isOpen={isOpen}/>
             </Nav>
         </Navbar>
     </Row> 

@@ -8,6 +8,9 @@
     font-family: 'Fugaz One';
     font-size: 30px;
     color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 5px;
 }
 .link
 {
