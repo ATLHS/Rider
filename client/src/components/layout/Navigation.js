@@ -17,7 +17,7 @@ const Navigation = () => {
                 <Link id="brand" to="/">RIDER</Link>
                 <BrowserView viewClassName="ml-auto">
                     <Nav>
-                        <Link to="/" className="text-light ml-2 mr-2 link" href="#features">Passager</Link>
+                        <Link to="/" className="text-light ml-2 mr-2 link" href="#features">Passagers</Link>
                         <Link to="/drivers" className="text-light ml-2 mr-2 link" href="#home">Chauffeur</Link>
                         <Link to="/login" className="text-light ml-2 mr-2 link" href="#pricing">Connexion</Link>
                     </Nav>
@@ -32,9 +32,9 @@ const Navigation = () => {
         <MobileView>
             <Navbar className="mobile_navbar" style={{display: `${isOpen ? "block" : "none"}`}}>
                 <Nav className="mobile_navlink">
-                    <Link to="/" className="text-light ml-2 mr-2 link" href="#features">Passager</Link>
-                    <Link to="/drivers" className="text-light ml-2 mr-2 link" href="#home">Chauffeur</Link>
-                    <Link to="/login" className="text-light ml-2 mr-2 link" href="#pricing">Connexion</Link>
+                    <Link to="/" className="text-light ml-2 mr-2 link" href="#features" onClick={() => setisOpen(false)}>Passager</Link>
+                    <Link to="/drivers" className="text-light ml-2 mr-2 link" href="#home" onClick={() => setisOpen(false)}>Chauffeur</Link>
+                    <Link to="/login" className="text-light ml-2 mr-2 link" href="#pricing" onClick={() => setisOpen(false)}>Connexion</Link>
                 </Nav>
             </Navbar>
         </MobileView>

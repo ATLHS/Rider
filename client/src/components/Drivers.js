@@ -12,6 +12,11 @@ const Drivers = () => {
         <Col className="driver position-absolute ">
             <Row className="d-flex flex-column rider_container">
                 <p className="text-left text-white ride_headline1">Conduisez. Et augmentez vos revenus.</p>
+                <Row>
+                    <Col className="pb-2" md={5}>
+                        <Button variant="light" type="button">Devenir chauffeur</Button>
+                    </Col>
+                </Row>
             </Row>
         </Col>
     </Row>
