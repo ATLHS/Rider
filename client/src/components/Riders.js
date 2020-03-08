@@ -52,8 +52,8 @@ const Riders = () => {
         isValid && console.log(values);
     }
     return (
-    <Row className="ride" style={{height: window.innerHeight}}>
-        <Image className="riders h-100 w-100 mw-100" src={window.innerWidth > 700 ? rider_desktop : rider_mobile} fluid/>
+    <Row className="ride">
+        <Image className="riders h-100 w-100 mw-100" src={window.innerWidth > 700 ? rider_desktop : rider_mobile}fluid/>
         <Col className="driver position-absolute ">
             <Row className="d-flex flex-column rider_container">
                 <p className="text-left text-white ride_headline1">Toute la ville. Dans le creux de votre main.</p>
