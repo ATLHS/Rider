@@ -57,7 +57,46 @@ const Riders = () => {
         <Col className="driver position-absolute ">
             <Row className="d-flex flex-column rider_container">
                 <p className="text-left text-white ride_headline1">Toute la ville. Dans le creux de votre main.</p>
-                
+                <Form noValidate className="rider_form" onSubmit={handleSubmit}>
+                    <Row>
+                        <Col className="pb-2" md={6}>
+                            <AlgoliaPlaces
+                            placeholder="Saisissez un lieu de prise en charge."
+                            options={{...placesOptions}}
+                            className="bg-transparent text-light shadow-none border border-white"
+                            onChange={({suggestion}) => (setLocation(suggestion.value), setLocationError(false))}
+                            onClear={() => (setLocationError(true), setLocation("")) }
+                            required
+                            />
+                            <p className="text-danger">{locationError ? "Indiquez une location valide." : ""}</p>
+                        </Col>
+                        <Col className="pb-2" md={6}>
+                            <AlgoliaPlaces
+                            placeholder="Indiquez votre destination."
+                            options={{...placesOptions}}
+                            className="bg-transparent text-light shadow-none border border-white"
+                            onChange={({suggestion}) => (setDestination(suggestion.value, setDestinationError(false)))}
+                            onClear={() => (setDestinationError(true), setDestination(""))}
+                            required
+                            />
+                            <p className="text-danger">{destinationError ? "Indiquez une destination valide." : ""}</p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className={`pb-2 ${conditionChecked === false ? "text-danger" : "text-white"}`} md={7}>
+                           <Form.Check
+                                label="J’accepte les conditions générales."
+                                onChange={() => setConditionChecked(conditionChecked ? false : true)}
+                                required
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="pb-2" md={5}>
+                            <Button variant="light" type="submit">Commandez une course</Button>
+                        </Col>
+                    </Row>
+                </Form>
             </Row>
         </Col>
     </Row>
