@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Riders from './components/Riders';
 import Drivers from './components/Drivers';
+import Homepage from './components/Homepage';
 import Navigation from './components/layout/Navigation';
 import './App.css';
 
@@ -12,11 +13,14 @@ function App() {
       <Container className="h-100" fluid>
         <Navigation />
         <Switch>
+          <Route path="/" exact>
+            <Riders />
+          </Route>
           <Route path="/drivers">
             <Drivers />
           </Route>
-          <Route path="/">
-            <Riders />
+          <Route path="/homepage">
+            <Homepage />
           </Route>
         </Switch>
       </Container>
