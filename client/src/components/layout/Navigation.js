@@ -18,8 +18,9 @@ const Navigation = () => {
                 <BrowserView viewClassName="ml-auto">
                     <Nav>
                         <Link to="/" className="text-light ml-2 mr-2 link" href="#features">Passagers</Link>
-                        <Link to="/drivers" className="text-light ml-2 mr-2 link" href="#home">Chauffeur</Link>
-                        <Link to="/login" className="text-light ml-2 mr-2 link" href="#pricing">Connexion</Link>
+                        <Link to="/drivers" className="text-light ml-2 mr-2 link" href="#driver">Chauffeur</Link>
+                        <Link to="/login" className="text-light ml-2 mr-2 link" href="#login">Connexion</Link>
+                        <Link to="/signup" className="text-light ml-2 mr-2 link" href="#signup">Inscription</Link>
                     </Nav>
                 </BrowserView>
                 <MobileView viewClassName="ml-auto">
@@ -33,8 +34,9 @@ const Navigation = () => {
             <Navbar className="mobile_navbar" style={{display: `${isOpen ? "block" : "none"}`}}>
                 <Nav className="mobile_navlink">
                     <Link to="/" className="text-light ml-2 mr-2 link" href="#features" onClick={() => setisOpen(false)}>Passager</Link>
-                    <Link to="/drivers" className="text-light ml-2 mr-2 link" href="#home" onClick={() => setisOpen(false)}>Chauffeur</Link>
-                    <Link to="/login" className="text-light ml-2 mr-2 link" href="#pricing" onClick={() => setisOpen(false)}>Connexion</Link>
+                    <Link to="/drivers" className="text-light ml-2 mr-2 link" href="#driver" onClick={() => setisOpen(false)}>Chauffeur</Link>
+                    <Link to="/login" className="text-light ml-2 mr-2 link" href="#login" onClick={() => setisOpen(false)}>Connexion</Link>
+                    <Link to="/signup" className="text-light ml-2 mr-2 link" href="#signup" onClick={() => setisOpen(false)}>Inscription</Link>
                 </Nav>
             </Navbar>
         </MobileView>

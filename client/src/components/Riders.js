@@ -85,7 +85,7 @@ const Riders = () => {
                     <Row>
                         <Col className={`pb-2 ${conditionChecked === false ? "text-danger" : "text-white"}`} md={7}>
                            <Form.Check
-                                label="J’accepte les Conditions d'utilisation de Rider"
+                                label="J’accepte les conditions générales."
                                 onChange={() => setConditionChecked(conditionChecked ? false : true)}
                                 required
                             />
