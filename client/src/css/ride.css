@@ -2,7 +2,7 @@
 .ride
 {
     background-color: black;
-    height: 100vh;
+    height: 100vh;  
 }
 .riders
 {
@@ -51,7 +51,6 @@
     .rider_container
     {
         padding: 10%;
-        padding-top: 20%;
     }
     .rider_form
     {
