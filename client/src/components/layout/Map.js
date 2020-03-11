@@ -1,28 +1,46 @@
-import React, {useState} from 'react';
-import Row from 'react-bootstrap/Row';
-import MapGL from 'react-map-gl';
+import React, {useEffect, useRef} from 'react';
+import mapboxgl from 'mapbox-gl';
+import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
+import '../../css/map.css'; 
 
-const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
-const Map = () => {
-    const [viewport, setviewport] = useState({
-        latitude: 48.866667,
-        longitude: 2.333333,
-        zoom: 14,
-        bearing: 0,
-        pitch: 0
-    })
-    return (
-    <>
-        <MapGL 
-        {...viewport}
-        width="100vw"
-        height="100vh"
-        mapStyle="mapbox://styles/blackdjango/ck6pogpqk163q1irvua8cecfp"
-        onViewportChange={setviewport}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
-        />
-    </>
+const mapInitialConfig = {
+    lng: 2.3488,
+    lat: 48.8534,
+    zoom: 11
+}
+
+const Map = props => {
+    let mapContainer = useRef(null);
+
+    useEffect(() => {
+        const map = new mapboxgl.Map({
+                container: mapContainer,
+                style: 'mapbox://styles/blackdjango/ck6pogpqk163q1irvua8cecfp',
+                center: [mapInitialConfig.lng, mapInitialConfig.lat],
+                zoom: mapInitialConfig.zoom
+            });
+            map.on('load', () => {
+                const direction = new MapboxDirections({
+                    profile: 'mapbox/driving-traffic',
+                    unit: 'metric',
+                    interactive: false,
+                    controls: {
+                        inputs: false,
+                        instructions: false,
+                        profileSwitcher: false
+                    },
+                    accessToken: process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
+                })
+                direction.setOrigin(props.origin);
+                direction.setDestination(props.destination);   
+            })
+        })
+        return (
+        <>
+            <div ref={el => mapContainer = el} className="mapContainer" />
+        </>
     );
 }
 
