@@ -8,11 +8,10 @@ const Homepage = () => {
         origin: localStorage.getItem('origin'),
         destination: localStorage.getItem('destination')
     }
-    console.log(direction);
     return (
         <>
             <Row className="h-100">
-                <Col className="p-0" style={{height: "40%", width: "100%"}}>
+                <Col className="p-0" style={{height: "100%", width: "100%"}}>
                     <Map origin={direction.origin} destination={direction.destination}/>
                 </Col>
             </Row>

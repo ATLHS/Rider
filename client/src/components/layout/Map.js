@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import mapboxgl from 'mapbox-gl';
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 import '../../css/map.css'; 
@@ -16,28 +16,30 @@ const Map = props => {
 
     useEffect(() => {
         const map = new mapboxgl.Map({
-                container: mapContainer,
-                style: 'mapbox://styles/blackdjango/ck6pogpqk163q1irvua8cecfp',
-                center: [mapInitialConfig.lng, mapInitialConfig.lat],
-                zoom: mapInitialConfig.zoom
+            container: mapContainer,
+            style: 'mapbox://styles/blackdjango/ck6pogpqk163q1irvua8cecfp',
+            center: [mapInitialConfig.lng, mapInitialConfig.lat],
+            zoom: mapInitialConfig.zoom
             });
+        const direction = new MapboxDirections({
+            profile: 'mapbox/driving-traffic',
+            unit: 'metric',
+            interactive: true,
+            controls: {
+                inputs: false,
+                instructions: false,
+                profileSwitcher: false
+            },
+            accessToken: process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
+            })
+            map.addControl(direction);
             map.on('load', () => {
-                const direction = new MapboxDirections({
-                    profile: 'mapbox/driving-traffic',
-                    unit: 'metric',
-                    interactive: false,
-                    controls: {
-                        inputs: false,
-                        instructions: false,
-                        profileSwitcher: false
-                    },
-                    accessToken: process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
-                })
                 direction.setOrigin(props.origin);
                 direction.setDestination(props.destination);   
             })
-        })
-        return (
+    })
+
+    return (
         <>
             <div ref={el => mapContainer = el} className="mapContainer" />
         </>
