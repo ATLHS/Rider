@@ -1,0 +1,31 @@
+.mapContainer
+{
+    height: 100%;
+}
+.driversOptions
+{
+    height: 80% ;
+    position: absolute !important;
+    z-index: 3;
+    top: 55%;
+    transform: translateY(-50%);
+    left: 2%;
+}
+.directionInfo
+{
+    background-color: black;
+}
+
+@media screen and (max-width: 700px)
+{
+    .mapContainer
+    {
+        height: 40%;
+        width: 100%;
+    }
+    .driversOptions
+    {
+        position: unset;
+        height: 60%;
+    }
+}

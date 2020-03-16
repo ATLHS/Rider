@@ -56,7 +56,7 @@ const Riders = () => {
         }
         
     }
-    return redirect ? <Redirect to="/homepage" /> : (
+    return redirect ? <Redirect to="/homepage" push/> : (
         <Row className="ride">
             <Image className="riders h-100 w-100 mw-100" src={window.innerWidth > 700 ? rider_desktop : rider_mobile}fluid/>
             <Col className="driver position-absolute ">
