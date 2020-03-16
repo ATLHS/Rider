@@ -19,7 +19,7 @@ mongoose
         { 
             useUnifiedTopology: true,
             useNewUrlParser: true
-        },
+        }
     )
     .then(() => console.log("MongoDB succesfully connected"))
     .catch(err => console.log(err));
