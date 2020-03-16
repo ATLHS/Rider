@@ -6,7 +6,7 @@
     "@animated-burgers/burger-squeeze": "^1.1.2",
     "@mapbox/mapbox-gl-directions": "^4.0.3",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.1",
+    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "algolia-places-react": "^1.5.1",
     "bootstrap": "^4.4.1",
