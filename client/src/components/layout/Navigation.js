@@ -18,7 +18,7 @@ const Navigation = () => {
         setNavColor(color);
     })
     
-    return (
+    return ( 
     <>
         <Row className="position-absolute w-100 navbar"> 
             <Navbar className="w-100"  bg="transparent" variant="dark">
