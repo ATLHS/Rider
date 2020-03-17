@@ -6,7 +6,7 @@ import '../css/signup.css';
 
 const Signup = () => {
     return (
-        <Row className="pl-0 pr-0 h-100 signupContainer">
+        <Row className="pl-0 pr-0 h-100 signupContainer section">
             <Col xs={12} md={6} className="signupDriverSection">
                 <Row>
                     <Col xs={10} md={8} className="m-auto">

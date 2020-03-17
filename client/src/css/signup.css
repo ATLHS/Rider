@@ -2,6 +2,9 @@
 .signupContainer
 {
     background-color: black !important;
+}
+.section
+{
     padding-top: 75px !important;
 }
 .signupTitle

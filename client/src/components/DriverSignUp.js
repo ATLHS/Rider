@@ -16,7 +16,7 @@ const DriverSignUp = () => {
     }
 
     return (
-        <Row className="h-100 p-0">
+        <Row className="pl-0 pr-0 h-100 section">
             <Col md={4} className="m-auto driverSignup">
                 <h2 className="signupTitle">Devenez chauffeur professionnel.</h2>
                 <p className="text-muted">Vous avez un compte ? <Link to="/signin">Connectez-vous</Link></p>
