@@ -15,7 +15,7 @@ const Navigation = () => {
     const location = useLocation();
     const [color] = useNavColor(location.pathname);
     useEffect(() => {
-        setNavColor(color);
+        setNavColor(isOpen ? "text-light" : color);
     })
     
     return ( 
