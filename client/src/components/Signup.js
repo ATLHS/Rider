@@ -26,8 +26,8 @@ const Signup = () => {
                             <div className="d-flex justify-content-between align-items-center">
                                 <h2 className="text-light">Commandez une course</h2><i className="fas fa-arrow-right text-light arrow"></i>
                             </div>
-                            <hr className="signUpHr"></hr>
                         </Link>
+                        <hr className="signUpHr"></hr>
                     </Col>
                 </Row>
             </Col>

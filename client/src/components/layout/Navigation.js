@@ -11,7 +11,7 @@ import '../../css/navigation.css';
 
 const Navigation = () => {
     const [isOpen, setisOpen] = useState(false);
-    const [navColor, setNavColor] = useState();
+    const [navColor, setNavColor] = useState("text-light");
     const location = useLocation();
     const [color] = useNavColor(location.pathname);
     useEffect(() => {
