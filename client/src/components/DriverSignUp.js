@@ -13,9 +13,10 @@ const DriverSignUp = () => {
         e.preventDefault();
         console.log(signUpData);
     }
+
     return (
         <Row className="h-100 p-0">
-            <Col md={4} className="m-auto">
+            <Col md={4} className="m-auto" style={{marginTop: "30%"}}>
                 <h2 className="signupTitle">Devenez chauffeur professionnel.</h2>
                 <p className="text-muted">Vous avez un compte ? <Link to="/signin">Connectez-vous</Link></p>
                 <Form noValidate onSubmit={handleSubmit}>

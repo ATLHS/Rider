@@ -16,7 +16,7 @@ const RiderSignUp = ({match, history}) => {
     
     return (
         <Row className="h-100 p-0">
-            <Col md={4} className="m-auto">
+            <Col md={4} className="m-auto mt-5">
                 <h2 className="signupTitle">Inscrivez-vous et commandez votre première course avec Rider.</h2>
                 <p className="text-muted">Vous avez un compte ? <Link to="/signin">Connectez-vous</Link></p>
                 <Form noValidate onSubmit={handleSubmit}>
