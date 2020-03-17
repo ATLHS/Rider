@@ -6,8 +6,8 @@ import '../css/signup.css';
 
 const Signup = () => {
     return (
-        <Row className="p-0 h-100 signupContainer">
-            <Col xs={12} md={6} className="signupDriverContainer">
+        <Row className="pl-0 pr-0 h-100 signupContainer">
+            <Col xs={12} md={6} className="signupDriverSection">
                 <Row>
                     <Col xs={10} md={8} className="m-auto">
                        <Link className="text-decoration-none" to="/driverssignup">
@@ -15,11 +15,11 @@ const Signup = () => {
                                 <h2 className="text-light">Devenez chauffeur</h2><i className="fas fa-arrow-right text-light arrow"></i>
                             </div>
                        </Link>
-                        <hr className="signUpHr"></hr>
+                        <hr className="w-100 signUpHr"></hr>
                     </Col>
                 </Row>
             </Col>
-            <Col xs={12} md={6} className="signupRiderContainer">
+            <Col xs={12} md={6} className="signupRiderSection">
                 <Row>
                     <Col xs={10} md={8} className="m-auto">
                         <Link className="text-decoration-none" to="/riderssignup">
@@ -27,7 +27,7 @@ const Signup = () => {
                                 <h2 className="text-light">Commandez une course</h2><i className="fas fa-arrow-right text-light arrow"></i>
                             </div>
                         </Link>
-                        <hr className="signUpHr"></hr>
+                        <hr className="w-100 signUpHr"></hr>
                     </Col>
                 </Row>
             </Col>

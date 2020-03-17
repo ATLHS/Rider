@@ -2,6 +2,7 @@
 .signupContainer
 {
     background-color: black !important;
+    padding-top: 75px !important;
 }
 .signupTitle
 {
@@ -10,24 +11,23 @@
 }
 .signUpHr
 {
-    width: 100%;
     border: solid 0.5px white;
 }
 .arrow
 {
     font-size: 2rem;
 }
-.signupDriverContainer, .signupRiderContainer
+.signupDriverSection, .signupRiderSection
 {
     margin: auto;
 }
 @media screen and (max-width: 700px)
 {
-    .signupDriverContainer
+    .signupDriverSection
     {
         margin-bottom: 15% !important;
     }
-    .signupRiderContainer
+    .signupRiderSection
     {
         margin-top: 15% !important;
     }

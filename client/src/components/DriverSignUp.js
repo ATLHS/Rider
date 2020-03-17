@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { useForm } from './hooks/useForm';
 import Button from 'react-bootstrap/Button';
+import '../css/signup.css';
 
 const DriverSignUp = () => {
     const [signUpData, handleChange] = useForm({firstname: "", name: "", email: "", password: "", confirmPassword: ""});
@@ -16,7 +17,7 @@ const DriverSignUp = () => {
 
     return (
         <Row className="h-100 p-0">
-            <Col md={4} className="m-auto" style={{marginTop: "30%"}}>
+            <Col md={4} className="m-auto driverSignup">
                 <h2 className="signupTitle">Devenez chauffeur professionnel.</h2>
                 <p className="text-muted">Vous avez un compte ? <Link to="/signin">Connectez-vous</Link></p>
                 <Form noValidate onSubmit={handleSubmit}>
